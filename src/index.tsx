@@ -8,14 +8,15 @@ const styles = {
   textAlign: "center"
 };
 
-const TimeKeeper = () => {
+class TimeKeeper extends React.Component {
+  state = {
+    dateCheck: new Date().toLocaleDateString()
+  };
+
   render() {
-    return (
-      var dateCheck = new Date().toLocaleDateString();
-      <input value={dateCheck} />
-    );
+    return <input value={this.state.dateCheck} />;
   }
-};
+}
 
 const App = () => (
   <div style={styles}>
